@@ -6,4 +6,4 @@ $content = $twig->render('@basic-page', array(
 	'editURL' => $page->editURL
 ));
 
-wireRenderFile('_main', compact('content'));
+echo wireRenderFile('_main', compact('content'));

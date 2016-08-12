@@ -1,6 +1,6 @@
 # How to use this
 
-Install ProcessWire in a directory, preferably with the blank profile. Now put all the files in this repo in the installation root and run `npm install` and `composer install`. 
+Install ProcessWire in a directory, preferably with the blank profile. Now put all the files in this repo in the installation root and run `npm install`, `composer install` and `./node_modules/.bin/fractal build-handles`.
 
 To start Fractal use `./node_modules/.bin/fractal start --sync` from your root folder.
 
