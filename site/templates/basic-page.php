@@ -5,3 +5,5 @@ $content = $twig->render('@basic-page', array(
 	'editable' => $page->editable(),
 	'editURL' => $page->editURL
 ));
+
+wireRenderFile('_main', compact('content'));
