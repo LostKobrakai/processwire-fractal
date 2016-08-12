@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@frctl/fractal": "^1.0.8",
+    "@frctl/mandelbrot": "^1.0.7",
+    "frctl-twig": "github:lostkobrakai/twig"
+  }
+}

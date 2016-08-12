@@ -1,0 +1,8 @@
+context:
+  editUrl: '#'
+  editable: true
+variants:
+  - name: not-editable
+    context:
+      editable: false
+      editUrl: '#'

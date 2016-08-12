@@ -1,0 +1,8 @@
+context:
+  title: Dummy Title
+variants:
+  - name: editable
+    context:
+      title: Dummy Title
+      editable: true
+      editUrl: '#'
