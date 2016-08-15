@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path');
 const fractal = module.exports = require('@frctl/fractal').create();
 const twigAdapter = require('frctl-twig');
 const mandelbrot = require('@frctl/mandelbrot');
@@ -49,10 +50,12 @@ function buildPhpArray(args, done){
 	const filename = args && args.options.file 
 		? args.options.file 
 		: defaultHandlePath;
+	const location = path.dirname(filename);
 
 	let file = "<?php\n\nreturn array(\n";
 	app.components.flatten().toArray().concat(app.components.flattenDeep().toArray()).forEach(function(component){
-		file += `\t"@${component.handle}"\n\t\t=> "${component.viewPath}",\n`;
+		let relativePath = path.relative(location, component.viewPath)
+		file += `\t"@${component.handle}"\n\t\t=> __DIR__ . "/${relativePath}",\n`;
 	});
 	file += `);\n`;
 
